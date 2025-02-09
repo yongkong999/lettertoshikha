@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter</title>
+    <style>
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #111;
+}
+
+.hidden-content {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <h1>Letter</h1> 
+    <h2 id="heading">What was the other name we used to call eachother?</h2>
+
+    <div id="passwordPrompt">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="letterContent" class="hidden-content">
+        <p>Dear Shikha,</p>
+        <p>I don’t even know if you’ll ever see this, but I guess that doesn’t really matter. I just need to say this, even if it’s just for my own peace of mind.</p>
+        <p>I messed up. I was rude, emotional, and immature, and I hurt you in ways I never should have. I pushed you away when I should have held on. And now, after all this time, I find myself missing you more than I can even put into words.</p>
+        <p>I don’t blame you for blocking me. Honestly, I probably deserve worse. But I just want you to know—I’m sorry. Truly. You didn’t deserve the way I treated you. You were always there, always patient, always giving, and I took that for granted. Looking back, I wish I had been better for you, for us.</p>
+        <p>The thing is, I still care about you. I still want the best for you, even if I’m not a part of your life anymore. I hope you’re happy. I hope you’re surrounded by people who make you feel safe, loved, and appreciated the way you should be.</p>
+        <p>I won’t lie and say I don’t wish things were different. That I don’t wish I could hear your voice again, share stupid jokes, or just sit in comfortable silence like we used to. But I know some things can’t be undone.</p>
+        <p>So, wherever you are, whatever you’re doing, I hope you’re doing okay. More than okay. I hope you’re healthy. And if you ever think of me, I just hope it’s with a little bit of warmth and not pain.</p>
+        <p>Take care, Bebu. You’ll always be my first love.</p>
+        <p>Yongkong<br>(Your Bebu)</p>
+
+        <h2>PS.</h2>
+        <p>I LOVE YOU.</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            var correctPassword = 'bebu'; // Password is case-insensitive
+            
+            if (password.toLowerCase() === correctPassword) {
+                document.getElementById('passwordPrompt').style.display = 'none'; // Hide password prompt
+                document.getElementById('letterContent').style.display = 'block'; // Show content
+                document.getElementById('heading').style.display = 'none'; // Hide the h2 "What was the other name we used to call eachother?"
+                document.getElementById('heading').textContent = 'My Dear Bebu'; // Change h2 text
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
