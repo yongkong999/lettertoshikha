@@ -3,4 +3,21 @@ body {
   background: #D58A94 !important;
   color: white;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  /* Center the content for the first page */
+}
+
+.first-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height for centering */
+  text-align: center;
+}
+
+.second-page {
+  text-align: left;
+  padding-left: 20px; /* Add some left padding if needed */
+  margin: 20px; /* Optional: Add margin to avoid the content sticking to the left edge */
 }
